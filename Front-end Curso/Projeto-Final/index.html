@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--OBS no momneto optei por fazer o css todo em um arquivo / onde o melhor para manuteção seria separar por seções  de conteudo (Cursando Sass) para melhor organização-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Barbearia Curso Alura</title>
+</head>
+
+<body>
+  <!--
+     Para centralizar os conteudos  da home poderia usar uma div  com  width 940px e centralizar ,
+     1. a nav fica estourando  a div  (RESOLVIDO) > Com div static  a nav respeita a caixa "ate"
+     2. nav estourando ao  reduzir a pagina  exemplo do probla no  GITHUB ainda nao resolvido tentando nao usar (grid e flex-box .)
+   -->
+  <header>
+    <nav class="nav-home">
+      <h1><img class="foto-home" src="img/transferir.png" alt=""></h1>
+
+      <ul class="lista-home">
+        <li><a class="link-home" href="#">Home</a></li>
+        <li><a class="link-home" href="#">Sobre</a></li>
+        <li><a class="link-home" href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <img class="img-main" src="img/como-investir-em-franquia-de-barbearia-692x368.jpg" alt="">
+
+  <main>
+
+    <section class="caixa-main">
+      <h2 class="titulos-principais">Sobre a Barbearia Shop</h2>
+
+      <img class="img-section" src="img/utensilios.jpg" alt="">
+
+      <p>Localizada no coração da cidade a Barbearia Alura traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Shop já é destaque na cidade e conquista novos clientes a cada dia.</p>
+      <p>Nossa missão é:<strong> "Proporcionar auto-estima e qualidade de vida aos clientes".</strong>
+      </p>
+      <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.
+      </p>
+
+    </section>
+
+    <section class="mapa">
+      <h2 class="titulos-principais">Nosso estabelecimento</h2>
+      <p>Nosso estabelecimento está localizado no coração da cidade.</p>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4483278365396!2d-46.63466568562861!3d-23.588249068469487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum!5e0!3m2!1spt-BR!2sbr!4v1568814489656!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </section>
+
+    <section class="beneficios">
+      <h3 class="titulos-principais">Benefícios</h3>
+
+      <ul>
+        <li class="itens">Atendimento aos Clientes</li>
+        <li class="itens">Espaço diferenciado</li>
+        <li class="itens">Localização</li>
+        <li class="itens">Profissionais Qualificados</li>
+      </ul>
+
+      <img src="img/beneficios.jpg" class="imag-embeneficios">
+
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="section-produtos">
+      <ul class="produtos">
+        <li>
+          <h2>Cabelo</h2>
+          <img src="img/cabelo.jpg">
+          <p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir</p>
+          <p class="produto-preco">R$ 25,00</p>
+        </li>
+        <li>
+          <h2>Barba</h2>
+          <img src="img/barba.jpg">
+          <p class="produto-descricao">Corte e desenho profissional de barba</p>
+          <p class="produto-preco">R$ 18,00</p>
+        </li>
+        <li>
+          <h2>Cabelo + Barba</h2>
+          <img src="img/cabelo+barba.jpg">
+          <p class="produto-descricao">Pacote completo de cabelo e barba</p>
+          <p class="produto-preco">R$ 35,00</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section-form">
+      <form>
+        <label for="nomesobrenome">Nome e sobrenome</label>
+        <input type="text" id="nomesobrenome" class="input-padrao" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+
+        <fieldset>
+          <legend>Como prefere o nosso contato?</legend>
+          <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email"> Email</label>
+
+          <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone"> Telefone</label>
+
+          <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked> WhatsApp</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Qual horário prefere ser atendido?</legend>
+          <select>
+            <option>Manhã</option>
+            <option>Tarde</option>
+            <option>Noite</option>
+          </select>
+        </fieldset>
+
+        <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+        <input type="submit" value="Enviar formulário" class="enviar">
+      </form>
+
+      <table>
+        <tr>
+          <td>Dia</td>
+          <td>Horário</td>
+        </tr>
+        <tr>
+          <td>Segunda</td>
+          <td>8h ~ 20h</td>
+        </tr>
+        <tr>
+          <td>Quarta</td>
+          <td>8h ~ 20h</td>
+        </tr>
+        <tr>
+          <td>Sexta</td>
+          <td>8h ~ 20h</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <img src="img/logo-branco.png">
+    <p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+  </footer>
+
+</body>
+</html>
